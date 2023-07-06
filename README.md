@@ -1,6 +1,6 @@
 # Microservice Example
 
-This is a simple microservice example built with Node.js and Express.js. It exposes a RESTful API endpoint that returns a greeting message.
+This is a simple microservice example built with Node.js and Express.js. It exposes a RESTful API with various endpoints.
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ These instructions will help you get the microservice up and running on your loc
 
 Make sure you have the following software installed on your machine:
 
-- Node.js (version 16.0.0 or higher)
+- Node.js (version X.X.X or higher)
 - npm (Node Package Manager)
 
 ### Installing
@@ -41,11 +41,11 @@ To start the microservice, run the following command:
 node server.js
 ```
 
-The microservice will be running at `http://localhost:80`.
+The microservice will be running at `http://localhost:3000`.
 
-## API Endpoint
+## API Endpoints
 
-The microservice provides a single API endpoint:
+The microservice provides the following API endpoints:
 
 ### Greeting
 
@@ -71,6 +71,54 @@ Example response:
 }
 ```
 
+### Time
+
+- **URL:** `/api/time`
+- **Method:** GET
+- **Response:**
+  - Content-Type: application/json
+  - Body: `{ "time": "{current_time}" }`
+
+Example request:
+
+```shell
+GET /api/time
+```
+
+Example response:
+
+```json
+{
+  "time": "12:34 PM"
+}
+```
+
+### Users
+
+- **URL:** `/api/users`
+- **Method:** GET
+- **Response:**
+  - Content-Type: application/json
+  - Body: `{ "users": [ { "id": 1, "name": "John Doe" }, { "id": 2, "name": "Jane Smith" }, { "id": 3, "name": "Bob Johnson" } ] }`
+
+Example request:
+
+```shell
+GET /api/users
+```
+
+Example response:
+
+```json
+{
+  "users": [
+    { "id": 1, "name": "John Doe" },
+    { "id": 2, "name": "Jane Smith" },
+    { "id": 3, "name": "Bob Johnson" }
+  ]
+}
+```
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request.
@@ -84,4 +132,4 @@ This project is licensed under the [MIT License](LICENSE).
 - The microservice is based on the [Express.js](https://expressjs.com) framework.
 - Thanks to the Node.js and npm communities for their valuable packages.
 
-Feel free to customize the README.md file according to your specific requirements and project details.
+Feel free to customize the README.md file further according to your specific requirements and project details.
